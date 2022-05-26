@@ -54,6 +54,8 @@ ul {
 
 .card {
 	border-radius: 0.5rem;
+	border: none;
+	box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.02), 0 15px 20px rgba(0, 0, 0, 0.04);
 }
 
 #flash {
@@ -329,8 +331,7 @@ ul {
 	border-radius: 1rem;
 	border: none;
 	color: #0f1d37;
-	box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.02),
-		0 15px 20px rgba(0, 0, 0, 0.04);
+	box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.02), 0 15px 20px rgba(0, 0, 0, 0.04);
 	z-index: 2;
 }
 
@@ -381,8 +382,7 @@ ul {
 	padding: 2rem;
 	border-radius: 1.25rem;
 	background: var(--green);
-	box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.02),
-		0 15px 20px rgba(0, 0, 0, 0.04);
+	box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.02), 0 15px 20px rgba(0, 0, 0, 0.04);
 }
 
 .join .card-title {
@@ -467,7 +467,7 @@ footer {
 }
 
 .back-to-top i {
-	padding: 1rem;
+	padding: 1rem 1.2rem;
 	font-size: 1.3rem;
 }
 
@@ -536,8 +536,7 @@ footer {
 	color: #0f1d37;
 	border: none;
 	border-radius: 0.5rem;
-	box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.02),
-		0 15px 20px rgba(0, 0, 0, 0.04);
+	box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.02), 0 15px 20px rgba(0, 0, 0, 0.04);
 	font-weight: 300;
 	font-size: 0.9rem;
 	color: var(--text-color);
@@ -858,6 +857,7 @@ figure img {
 	user-select: none;
 	clip-path: circle(50%);
 	margin-bottom: 1.2rem;
+	object-fit: cover;
 }
 
 figure figcaption {

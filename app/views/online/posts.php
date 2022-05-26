@@ -19,7 +19,7 @@
                             <div class="card-body">
                                 <div class="post-info">
                                     <h4 class="post-title"><?= $post['title']; ?></h4>
-                                    <p class="posted-time">Published by <?= $post['username']; ?> - <?= date('F j, Y h.m', strtotime($post['created_at'])); ?></p>
+                                    <p class="posted-time">Published by <?= $post['username']; ?> - <?= date('F j, Y h.i', strtotime($post['created_at'])); ?></p>
                                 </div>
                                 <div class="post-action">
                                     <a href="<?= BASEURL . '/online/post/' . $post['post_id'] . '/#comment-input'; ?>" class="float-start">Post a Comment</a>

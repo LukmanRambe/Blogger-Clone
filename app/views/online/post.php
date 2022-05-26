@@ -15,7 +15,7 @@
                     <div class="card-body">
                         <div class="post-info">
                             <h4 class="post-title"><?= $data['post']['title']; ?></h4>
-                            <p class="posted-time">Published by <?= $data['post']['username']; ?> - <?= date('F j, Y h.m', strtotime($data['post']['created_at'])); ?></p>
+                            <p class="posted-time">Published by <?= $data['post']['username']; ?> - <?= date('F j, Y h.i', strtotime($data['post']['created_at'])); ?></p>
                         </div>
                         <article class="post-content">
                             <p><?= $data['post']['content']; ?></p>

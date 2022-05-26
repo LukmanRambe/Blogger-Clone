@@ -9,7 +9,7 @@ class SignUp_model {
     }
 
     public function signUp($data) {
-        $query = "INSERT INTO $this->table (username, email, password) VALUES (:username, :email, :password)";
+        $query = "INSERT INTO $this->table (username, email, password, profile_picture) VALUES (:username, :email, :password, 'default.jpg')";
 
         $this->db->query($query);
         $this->db->bind('username', $data['username']);

@@ -18,7 +18,7 @@ class SignUp extends Controller {
         // Check for post
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Sanitize POST data
-            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
             $data = [
                 'username' => trim($_POST['username']),
@@ -32,8 +32,8 @@ class SignUp extends Controller {
                 'formError' => ''
             ];
 
-            $nameValidation = "/^[a-zA-Z0-9]*$/";
-            $passwordValidation = "/^(.{0,7}|[^a-z]*|[^\d]*)$/i";
+            $nameValidation = "/^[a-z A-Z 0-9]*$/";
+            $passwordValidation = "/^(.{0,7}|[^a-z ]*|[^\d]*)$/i";
 
             // Validate confirm password
             if (empty($data['confirm-password'])) {

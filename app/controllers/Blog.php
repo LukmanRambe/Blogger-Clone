@@ -111,7 +111,7 @@ class Blog extends Controller {
         // Check for post
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Sanitize post data
-            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
             $data = [
                 'judul' => $_SESSION['username'],
@@ -172,7 +172,7 @@ class Blog extends Controller {
                     unlink($data['tmpName']);
 
                     $currentPic = 'img/userProfilePicture/' . $data['currentPic'];
-                    if ($currentPic != 'img/userProfilePicture/nouserpic.jpeg') {
+                    if ($currentPic != 'img/userProfilePicture/default.jpg') {
                         unlink($currentPic);
                     }
 

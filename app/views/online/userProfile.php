@@ -12,7 +12,7 @@
                     <div class="user-info">
                         <h5 class="mt-5"><?= $data['user']['username']; ?></h5>
                         <p><?= $data['user']['email']; ?></p>
-                        <p>Member since <?= date('F j, Y', strtotime($data['user']['join_date'])); ?></p>
+                        <p>Member since <?= date('F j, Y', strtotime($data['user']['created_at'])); ?></p>
                     </div>
                 </div>
             </div>
